@@ -33,7 +33,7 @@
   <p>On device, Nocta may derive temporary session signals (for example emotional/mental-pattern labels). A limited subset of pattern identifiers and related metadata may be stored locally for cross-night continuity. Dialogue transcripts are not stored in that continuity store. They are stored in the on-device chat library described above.</p>
 
   <h2>4. Purchases and subscriptions</h2>
-  <p>If you subscribe or buy premium access, purchase status is handled through Apple and our payments partner (RevenueCat). We do not store your full payment card details in the app.</p>
+  <p>If you subscribe or buy premium access, purchase status is handled through Apple and our payments partner (RevenueCat). We do not store your full payment card details in the app. RevenueCat assigns this install a random anonymous app user ID and links your purchase status to it; Nocta does not create an account or ask for your name or email.</p>
 
   <h2>5. Crash reports</h2>
   <p>If crash reporting is enabled for a build, technical crash diagnostics may be sent to Sentry. The app is configured to avoid sending payment secrets and to scrub likely conversation payloads where feasible.</p>
@@ -49,7 +49,7 @@
 
   <h2>9. Third parties</h2>
   <ul>
-    <li>Nocta's server relay. It forwards the prepared prompt to OpenAI. Its own stored records are the App Attest public key and signature counter for this install, request and spend counters used to enforce limits, and a verification challenge. Those records do not include your chat transcript. The challenge record is deleted when it is used. This policy states no retention period for an unused challenge or for the other relay records.</li>
+    <li>Nocta's server relay. It forwards the prepared prompt to OpenAI. Its own stored records are the App Attest public key, its key identifier and signature counter for this install, request and spend counters used to enforce limits, and a verification challenge. Those records do not include your chat transcript. The challenge record is deleted when it is used. This policy states no retention period for an unused challenge or for the other relay records.</li>
     <li>OpenAI — generates the cloud reply</li>
     <li>Apple — App Store / In-App Purchase</li>
     <li>RevenueCat — subscription entitlement status</li>
